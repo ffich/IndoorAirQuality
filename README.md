@@ -38,4 +38,9 @@ The table below resumes the connection between the two boards:
 | Green LED          | 17             |
 | Red LED            | 16             |
 
+## Tests
+I can't access the lab in this period, so I'm really bare-metal testing it. I was nevertheless able to build a small proto and it seems working fine, here are a couple of pictures:
 
+![1](Images/setup)
+
+![2](Images/working)
