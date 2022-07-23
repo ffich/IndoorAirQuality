@@ -6,11 +6,17 @@ import adafruit_sgp30
 CO2_Line = 20
 Tvoc_Line = 40
 
+led_green = Pin(17, Pin.OUT)
+led_red = Pin(16, Pin.OUT)
+
+led_green.on()
+led_red.on()
+
 # OLED enable pin
 oled_sts = Pin(16, Pin.OUT)
 oled_sts.on()
 
-# Initialize I2C bus
+# Initialize I2C buses
 s_i2c = I2C(scl=Pin(18), sda=Pin(19), freq=100000)
 d_i2c = SoftI2C(scl=Pin(15), sda=Pin(4))
 
@@ -21,8 +27,6 @@ oled = ssd1306.SSD1306_I2C(oled_width, oled_height, d_i2c)
 
 # Create library object on our I2C port
 sgp30 = adafruit_sgp30.Adafruit_SGP30(s_i2c)
-
-#print("SGP30 serial #", [hex(i) for i in sgp30.serial])
 
 # Initialize SGP-30 internal drift compensation algorithm.
 sgp30.iaq_init()
@@ -95,4 +99,4 @@ while True:
             print('Impossible to write SGP30 baselines!')
 
     # A measurement should be done every 60 seconds, according to the doc.
-    time.sleep(60)
+    time.sleep(1)
