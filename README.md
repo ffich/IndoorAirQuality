@@ -41,6 +41,6 @@ The table below resumes the connection between the two boards:
 ## Tests
 I can't access the lab in this period, so I'm really bare-metal testing it. I was nevertheless able to build a small proto and it seems working fine, here are a couple of pictures:
 
-![1](Images/setup)
+![setup](Images/setup.jpg)
 
-![2](Images/working)
+![working](Images/working.jpg)
