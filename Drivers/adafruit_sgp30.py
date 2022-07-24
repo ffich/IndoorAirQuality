@@ -66,6 +66,7 @@ class Adafruit_SGP30:
         self.serial = self._i2c_read_words_from_cmd([0x36, 0x82], 0.01, 3)
         # get featuerset
         featureset = self._i2c_read_words_from_cmd([0x20, 0x2f], 0.01, 1)
+        # Avoid to get the feature set
         #if featureset[0] != _SGP30_FEATURESET:
         #    raise RuntimeError('SGP30 Not detected')
         self.iaq_init()
