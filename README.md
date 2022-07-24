@@ -66,4 +66,4 @@ I can't access the lab in this period, so I'm really bare-metal testing it. I wa
 ![working](Images/working.jpg)
 
 ## Pubblications
-A detailed article in italian will soon be realeased on [Elettronica In](https://www.elettronicain.it/)
+A detailed article in italian will soon be realeased on [Elettronica In](https://www.elettronicain.it/).
