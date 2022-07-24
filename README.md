@@ -4,6 +4,9 @@ Public repo for Indoor Air quality made for Elettronica In.
 ## What's this
 The Indoor Air Quality project is a simple ESP32 based device intended for acquirign and collecting Air quality data inside buildings like schools and offices, in order to have an indication that highlight the needs for air refresh. This is particularly useful for COVID infection prevention. The working principle is quite simple: the board can be configured with an user-defined CO2 threshold that indciated the maximum allowed CO2 concentration. Once this threshold is reached, the board will show a message on the display and turn on a red LED that indicated the need for an air refresh (e.g. open windows). Once the CO2 concentration falls back to an acceptable level, the red LED is turned off and a green one i light up (is possible to close the windows).
 
+The concept is represented in the picture below:
+![concept](Images/concept.jpg)
+
 ## HW details
 The core of the system is the WiFi kit 32 a nice development board made by Heltec and available on futurashop at the following link:
 [https://futuranet.it/prodotto/modulo-esp32-con-display-oled-096/](https://futuranet.it/prodotto/modulo-esp32-con-display-oled-096/)
