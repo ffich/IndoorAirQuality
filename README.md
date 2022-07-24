@@ -64,3 +64,6 @@ I can't access the lab in this period, so I'm really bare-metal testing it. I wa
 ![setup](Images/setup.jpg)
 
 ![working](Images/working.jpg)
+
+## Pubblications
+A detailed article in italian will soon be realeased on [Elettronica In](https://www.elettronicain.it/)
