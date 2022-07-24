@@ -30,7 +30,7 @@ The board has the following characteristics:
 
 The WiFi kit 32 is connected to the SGP30, an indoor air quality sensor from sensirion, capable of reading Co2 and TVOC concentration. Thi sensor is also available in a confortable 4-pin breakout board from futurashop at the following link: [https://futuranet.it/prodotto/breakout-con-sensore-qualita-dellaria-sgp30/](https://futuranet.it/prodotto/breakout-con-sensore-qualita-dellaria-sgp30/)
 
-![sgpt30](Images/sgpt30.png)
+![sgpt30](Images/sgp30.png)
 
 ## Wiring
 The wiring between the WiFi Kit 32 and the SGP30 breakout is quite simple as the sensor got an i2c interface and thus it needs just SDA and SCL to be connected, plus power and groud. Additionally you need to foresee two additional connectio for green ad red LED.
