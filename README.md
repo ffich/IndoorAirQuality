@@ -60,7 +60,7 @@ These two libraries constituite the foundation of my SW architecture, represente
 
 ![sw_architecture](Images/sw_architecture.png)
 
-To build the application layer I got inspiration from the example found in the [Alex SGP30 repo](https://github.com/alexmrqt/micropython-sgp30/tree/master/examples)  
+To build the application layer I got inspiration from the example found in the [Alex SGP30 repo](https://github.com/alexmrqt/micropython-sgp30/tree/master/examples).  
 
 ## Tests
 I can't access the lab in this period, so I'm really bare-metal testing it. I was nevertheless able to build a small proto and it seems working fine, here are a couple of pictures:
