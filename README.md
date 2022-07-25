@@ -69,5 +69,9 @@ I can't access the lab in this period, so I'm really bare-metal testing it. I wa
 
 ![working](Images/working.jpg)
 
+**!!! Update !!!**: I was sick to keep my finger on the board to make the sensor's I2C working and so I purchased a cheap solder iron on Amazon and make a less-bare-metal-proto. Now it's running the calibration step (lasts 12 hours), will see :-) Here is a video anyhow:
+
+[Indoor Air Quality Meter Youtube Video](https://www.youtube.com/watch?v=ah0WZv5Y7ic)
+
 ## Pubblications
 A detailed article in italian will soon be realeased on [Elettronica In](https://www.elettronicain.it/).
