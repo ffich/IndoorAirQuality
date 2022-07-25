@@ -73,5 +73,10 @@ I can't access the lab in this period, so I'm really bare-metal testing it. I wa
 
 [Indoor Air Quality Meter Youtube Video](https://www.youtube.com/watch?v=ah0WZv5Y7ic)
 
+## Throubleshooting
+Some known issues:
+
+1. If you run the device standalone (i.e. with the application file embedded in a main.py file) you may notice that the display ain't working. I don't know why yet, but I'll investigate. A simple workaround to make it working is to press the reset button.
+
 ## Pubblications
 A detailed article in italian will soon be realeased on [Elettronica In](https://www.elettronicain.it/).
