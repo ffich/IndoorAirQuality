@@ -47,8 +47,8 @@ The tables below resume the connections between the wifi kit 2 and SGP30 breakou
 
 |        LEDs        |      Pins      |
 |--------------------|:--------------:|
-| Green LED          | 17             |
-| Red LED            | 16             |
+| Green LED          | 2              |
+| Red LED            | 17             |
 
 ## SW architecture
 I've found two nice libraries to manage the peripherals:
