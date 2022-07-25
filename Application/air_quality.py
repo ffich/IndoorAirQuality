@@ -11,19 +11,24 @@ import adafruit_sgp30
 # --------------------------------------------------------------------------------
 CO2_LINE = 20
 TVOC_LINE = 40
-DEBUG = True
+DEBUG = False
 
 # --------------------------------------------------------------------------------
 # - USER TH DEFAULT VALUES
 # --------------------------------------------------------------------------------
-co2eq_th = 450
-hysteresis = 10
+co2eq_th = 2500
+hysteresis = 200
 
 # --------------------------------------------------------------------------------
 # - TIMING CONST
 # --------------------------------------------------------------------------------
-SAMPLING_TIME_S = 60
+SAMPLING_TIME_S = 1
 SENS_INIT_DELAY_S = 15
+
+# 3600
+ONE_HOUR_S = 3600
+# 43200
+TWELVE_HOURS_S = 43200
 
 # --------------------------------------------------------------------------------
 # - GLOBALS
@@ -44,10 +49,10 @@ def user_message(text):
 def oled_data(co2eq, tvoc):
     oled.fill(0)
     oled.text('CO2 Sensor - Ein', 0, 0)
-    oled.text('Co2 Eq: ', 0, CO2_LINE)
-    oled.text(str(co2eq) + ' ppm', 60, CO2_LINE)    
+    oled.text('CO2: ', 0, CO2_LINE)
+    oled.text(str(co2eq) + ' ppm',45, CO2_LINE)    
     oled.text('TVOC: ', 0, TVOC_LINE)
-    oled.text(str(tvoc) + ' ppb', 60, TVOC_LINE)
+    oled.text(str(tvoc) + ' ppb', 45, TVOC_LINE)
     oled.show() 
 
 def get_sensor_baseline():
@@ -75,9 +80,9 @@ def update_sensor_baseline():
     global baseline_time
     
     # Baselines should be saved after 12 hour the first time then every hour, according to the doc
-    if (has_baseline and (time.time() - baseline_time >= (3600/SAMPLING_TIME_S))) \
-            or ((not has_baseline) and (time.time() - baseline_time >= (43200/SAMPLING_TIME_S))):        
-        user_message('Baseline Set')      
+    if (has_baseline and (time.time() - baseline_time >= (ONE_HOUR_S/SAMPLING_TIME_S))) \
+            or ((not has_baseline) and (time.time() - baseline_time >= (TWELVE_HOURS_S/SAMPLING_TIME_S))):        
+        
         baseline_time = time.time()
 
         try:
@@ -89,8 +94,11 @@ def update_sensor_baseline():
             f_co2.close()
             f_tvoc.close()
             has_baseline = True
+            user_message('Baseline Set')    
         except:
-            user_message('No baseline')    
+            user_message('No baseline')
+            
+    time.sleep(2)            
     
 def get_user_threshold():
     global co2eq_th
@@ -115,8 +123,8 @@ def get_user_threshold():
 # --------------------------------------------------------------------------------
 
 # LEDs
-led_green = Pin(17, Pin.OUT)
-led_red = Pin(16, Pin.OUT)
+led_green = Pin(2, Pin.OUT)
+led_red = Pin(17, Pin.OUT)
 led_green.on()
 led_red.off()
 
